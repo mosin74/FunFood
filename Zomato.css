@@ -1,0 +1,43 @@
+*{
+    /* margin: 5px 0px 5px 0px; */
+    /* padding: 0px; */
+
+}
+.logo{
+    width: 150px;
+}
+.nav-bar{
+    width: 100%;
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.nav-bar > ul{
+    list-style: none;
+    display: flex;
+
+}
+.nav-bar > ul > li{
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+
+
+}
+.Card{
+    width: 200px;
+    border: 1px solid;
+    padding: 10px;
+    margin: 10px;
+    line-height: 0.2rem;
+}
+.Card>img{
+    width: 100%;
+}
+
+.restaro-list{
+    display: flex;
+    flex-wrap: wrap;
+}
