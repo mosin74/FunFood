@@ -6,17 +6,49 @@ import {useEffect, useState} from 'react'
 export const Body = () => {
 
 
+
+
     function filterData(searchText, restaurants) {
-        const Data = restaurants.filter((restaurant) => restaurant.data.name.includes(searchText));
+        const Data = restaurants.filter((restaurant) => restaurant?.data?.name?.toLowerCase()?.includes(searchText.toLowerCase()));
         return Data;
     }
+
+
+
+
     // Search Text is local state varaible
     const [searchText, setSearchText] = useState(); //To Create State Variable 
     const [restaurants, setRestaurants] = useState(restaurantList);
+    const [Filteredrestaurants, setFilteredRestaurants] = useState(restaurantList);
 
-    useEffect(()=>{
-           console.log("useEffect when searchText is change ")
-    },[restaurants]);
+if (Filteredrestaurants.length===0) {
+    return <h1>No Result Found</h1>
+    
+}
+
+
+
+
+
+// API call not worked
+    // useEffect(()=>{
+    //     getRestaurant();
+    // },[]);
+
+
+
+    // async function getRestaurant()
+    // {
+    //     const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+    //     const json = await data.json();
+    //     console.log(json);
+    //     setRestaurants(json?.data?.success?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    // }
+
+
+
+
+
 
     return (
         <>
@@ -32,7 +64,7 @@ export const Body = () => {
                 />
                 <button onClick={() => {
                     const Data = filterData(searchText, restaurants);
-                    setRestaurants(Data);
+                    setFilteredRestaurants(Data);
 
                 }}>
                     Search</button>
@@ -41,7 +73,7 @@ export const Body = () => {
 
             <div className='restaro-list' >
 
-                {restaurants.map((restaurant) => {
+                {Filteredrestaurants.map((restaurant) => {
                     return (
                         <RestroCard{...restaurant.data} />
                     );
