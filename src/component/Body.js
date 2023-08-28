@@ -1,6 +1,6 @@
 import { restaurantList } from "../config";
 import RestroCard from "./RestaurantCard";
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 
 
 export const Body = () => {
@@ -13,6 +13,10 @@ export const Body = () => {
     // Search Text is local state varaible
     const [searchText, setSearchText] = useState(); //To Create State Variable 
     const [restaurants, setRestaurants] = useState(restaurantList);
+
+    useEffect(()=>{
+           console.log("useEffect when searchText is change ")
+    },[restaurants]);
 
     return (
         <>

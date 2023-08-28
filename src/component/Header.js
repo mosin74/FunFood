@@ -17,6 +17,7 @@ export const HeaderComponent = () => {
 
         <div className="nav-bar">
             <img src={ZomatoLogo} alt="" className="logo" />
+            
             <ul>
                 <li>Home</li>
                 <li>About us</li>
