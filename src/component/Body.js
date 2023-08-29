@@ -1,8 +1,7 @@
 import { restaurantList } from "../config";
 import RestroCard from "./RestaurantCard";
 import {useEffect, useState} from 'react'
-
-
+import Shimmer from "./Shimmer";
 export const Body = () => {
 
 
@@ -21,7 +20,7 @@ export const Body = () => {
     const [restaurants, setRestaurants] = useState(restaurantList);
     const [Filteredrestaurants, setFilteredRestaurants] = useState(restaurantList);
 
-if (Filteredrestaurants.length===0) {
+if (setFilteredRestaurants.length===0) {
     return <h1>No Result Found</h1>
     
 }
@@ -31,27 +30,34 @@ if (Filteredrestaurants.length===0) {
 
 
 // API call not worked
-    // useEffect(()=>{
-    //     getRestaurant();
-    // },[]);
+    useEffect(()=>{
+        getRestaurant();
+    },[]);
 
 
 
-    // async function getRestaurant()
-    // {
-    //     const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-    //     const json = await data.json();
-    //     console.log(json);
-    //     setRestaurants(json?.data?.success?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-    // }
+    async function getRestaurant()
+    {
+        const data =  await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const json =  await data.json();
+        console.log(json);
+        setRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setFilteredRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+
+        console.log("render");
+    }
 
 
 
 
 
 
-    return (
-        <>
+
+    
+    return ( <>
+        {
+        restaurants?.length===0 ? (< Shimmer />):(
+            <>
             <div className="search-Container">
                 <input type="text"
                     className="SearchInput"
@@ -60,8 +66,9 @@ if (Filteredrestaurants.length===0) {
                     onChange={(e) => {
                         setSearchText(e.target.value);
 
-                    }}
+                    }} 
                 />
+
                 <button onClick={() => {
                     const Data = filterData(searchText, restaurants);
                     setFilteredRestaurants(Data);
@@ -73,13 +80,16 @@ if (Filteredrestaurants.length===0) {
 
             <div className='restaro-list' >
 
-                {Filteredrestaurants.map((restaurant) => {
+                {Filteredrestaurants.map((restaurants) => {
                     return (
-                        <RestroCard{...restaurant.data} />
+                        <RestroCard{...restaurants.info} />
                     );
                 })
                 }
             </div>
         </>
+        )
+    }
+    </>
     );
 };
