@@ -2,7 +2,7 @@ const Shimmer = ()=>{
  
  return(
 
-<h1> Shimmer </h1>
+<h1> Shimmer is LAOADING </h1>
      
      )
 }
