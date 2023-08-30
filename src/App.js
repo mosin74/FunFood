@@ -3,11 +3,12 @@ import React, { Children } from 'react';
 import ReactDOM from 'react-dom/client';
 import  Body  from './component/Body.js';
 import { HeaderComponent } from './component/Header.js';
-import { FooterComponent } from './component/Footer';
+import { FooterComponent } from './component/Footer.js';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
-import Error from "./component/ErrorPage";
-import About from "./component/About";
-import Contact from "./component/Contact";
+import Error from "./component/ErrorPage.js";
+import About from "./component/About.js";
+import Contact from "./component/Contact.js";
+import RestaurantMenu from './component/RestaurantMenu.js';
 
 
 
@@ -37,11 +38,17 @@ const appRouter = createBrowserRouter([
                 path: "/About",
                 element: <About/>,
                 errorElement: <Error />
-            },    {
+            },   
+            {
                 path: "/Contact",
                 element: <Contact/>,
                 errorElement: <Error />
-            }
+            },
+            {
+                path: "/restaurant/:id",
+                element: <RestaurantMenu/>,
+                errorElement: <Error />
+            },
         ]
             
     },
