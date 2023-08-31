@@ -83,12 +83,15 @@ const Body = () => {
                         <div className='restaro-list' >
                             {Filteredrestaurants.map((restaurants) => {
                                 return (
-                                   
-                                        <RestroCard{...restaurants.info} key={restaurants.info.id} />
-                                    
-                                );
+                                    <Link to={"/restaurant/"+restaurants.info.feeDetails.restaurantId}>
+                                        <RestroCard {...restaurants.info}/>
+                                    </Link>
+                                )
                             })
+
+
                             }
+
                         </div>
                     </>
 
