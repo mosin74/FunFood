@@ -3,17 +3,18 @@ import RestroCard from "./RestaurantCard";
 import { useEffect, useState } from 'react'
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
-
+import { filterData } from "../../utils/Helper";
+import { Restaurants_URL } from "../config";
 
 const Body = () => {
 
 
 
 
-    function filterData(searchText, restaurants) {
-        const Data = restaurants.filter((restaurant) => restaurant?.info?.name?.toLowerCase()?.includes(searchText.toLowerCase()));
-        return Data;
-    }
+    // function filterData(searchText, restaurants) {
+    //     const Data = restaurants.filter((restaurant) => restaurant?.info?.name?.toLowerCase()?.includes(searchText.toLowerCase()));
+    //     return Data;
+    // }
 
 
 
@@ -34,15 +35,13 @@ const Body = () => {
 
 
 
-    // API call not worked
     useEffect(() => {
         getRestaurant();
     }, []);
 
 
-
     async function getRestaurant() {
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch(Restaurants_URL);
         const json = await data.json();
         // console.log(json);
         setRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
