@@ -1,24 +1,23 @@
 
-import React, { Children } from 'react';
+import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import Body from './component/Body.js';
 import { HeaderComponent } from './component/Header.js';
 import { FooterComponent } from './component/Footer.js';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import Error from "./component/ErrorPage.js";
-import About from "./component/About.js";
+// import About from "./component/About.js";
 import Contact from "./component/Contact.js";
 import RestaurantMenu from './component/RestaurantMenu.js';
 import ClassComp from './component/ClassComp.js';
 
 
 
+const About = lazy(() => import("./component/About"));
 
 const AppLayout = () => (
     <>
         <HeaderComponent />
-        {/* {here we have to provide outlet } */}
-        {/* <Body /> */}
         <Outlet />
         <FooterComponent />
     </>
@@ -37,7 +36,10 @@ const appRouter = createBrowserRouter([
             },
             {
                 path: "/About",
-                element: <About />,
+                element: 
+                <Suspense fallback="Loading....">
+                    <About />
+                </Suspense>,
                 errorElement: <Error />
             },
             {

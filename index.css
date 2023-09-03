@@ -34,6 +34,7 @@
     padding: 10px;
     margin: 10px;
     line-height: 0.2rem;
+    overflow: hidden;
 }
 .Card>img{
     width: 100%;
