@@ -31,18 +31,55 @@
 
 }
 
+.Offer {
+    margin: 0px 120px;
+    display: flex;
+    justify-content: first baseline;
+    overflow: hidden;
+    padding-bottom: 20px;
+
+}
+
+.IMG-offer {
+    padding: 10px 30px 30px 30px;
+    width: 400px;
+}
+
+.OnMind {
+    display: flex;
+    justify-content: first baseline;
+    overflow: hidden;
+    margin: 0px 120px;
+    border-bottom: 1px solid rgba(50, 50, 50, 0.365);
+}
+
+.OnMind>img,
+h {
+    width: 150px
+}
+
+
+.Heading {
+    margin: 0px 120px;
+    padding: 15px 0px 10px 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgba(0, 0, 0, 0.662);
+}
+
 .Card {
-   box-shadow: 10px;
+    /* border-radius: 2px; */
     justify-content: center;
     color: black;
-    width: 200px;
+    width: 175px;
     height: 200px;
     /* border: 1px solid; */
     padding: 10px;
     margin: 10px;
     /* line-height:0.1rem; */
     overflow: hidden;
+    text-overflow: ellipsis;
 }
+
 
 .Card h3,
 p,
@@ -65,14 +102,16 @@ p1 {
 .Card>img {
     width: 100%;
     height: 60%;
-    /* border-radius: 50px; */
+    border-radius: 10px;
 }
 
 .restaro-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin:  0px 120px;
+    margin: 0px 120px;
+    padding-top: 20px;
+
 }
 
 .search-Container>input {
@@ -86,6 +125,8 @@ p1 {
 .cuisines {
     font-size: small;
     line-height: 1rem;
+    color: rgb(129, 129, 129);
+
 }
 
 .Shimmer {
@@ -107,4 +148,8 @@ p1 {
 .avgRating {
     display: flex;
     align-items: center;
+}
+
+h3 {
+    font-size: 15px;
 }

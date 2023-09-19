@@ -2,6 +2,7 @@ export const ZomatoLogo ="https://logos-world.net/wp-content/uploads/2020/11/Zom
 export const IMG_CDN_URL ="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/";
 export const Menu_URL="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.7199008&lng=75.857383&restaurantId=";
 export const Restaurants_URL="https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+export const Offer_IMG_CDN_URL="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_850,h_504/";
 export const restaurantList = [
     {
         info: {
