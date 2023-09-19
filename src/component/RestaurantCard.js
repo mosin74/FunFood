@@ -4,10 +4,10 @@ import { IMG_CDN_URL } from "../config";
     return (
 
         <div className="Card ">
-            <img src={IMG_CDN_URL+cloudinaryImageId} />
+            <img className="IMAGE"src={IMG_CDN_URL+cloudinaryImageId} />
             <h3>{name}</h3>
-            <h4>{cuisines}</h4>
-            <h5>{avgRating}star</h5>        
+            <p className="cuisines">{cuisines.join(", ")}</p>
+            <p1>{avgRating}star</p1>        
         </div>
     );
 };
