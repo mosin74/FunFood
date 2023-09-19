@@ -1,13 +1,15 @@
-*{
+* {
     text-decoration: none;
 }
-.logo{
+
+.logo {
     width: 150px;
 }
-.nav-bar{
+
+.nav-bar {
 
     width: 100%;
-  
+
     border: 1px solid;
     display: flex;
     justify-content: space-between;
@@ -15,54 +17,65 @@
 
 }
 
-.nav-bar > ul{
+.nav-bar>ul {
     list-style: none;
     display: flex;
 
 }
-.nav-bar > ul > li{
+
+.nav-bar>ul>li {
     padding: 20px;
     font-size: 20px;
     font-weight: bold;
 
 
 }
-.Card{
+
+.Card {
+   box-shadow: 10px;
     justify-content: center;
     color: black;
     width: 200px;
-    height: 300px;
-    border: 1px solid;
+    height: 200px;
+    /* border: 1px solid; */
     padding: 10px;
     margin: 10px;
     /* line-height:0.1rem; */
     overflow: hidden;
 }
-.Card h3,p,p1{
+
+.Card h3,
+p,
+p1 {
     padding: 0px;
     margin: 0px;
 }
-.Card p1{
-    font-weight:400;
+
+.Card p1 {
+    font-size: 13px;
+    font-weight: 400;
 
 }
-.Card p{
-    font-weight:500;
+
+.Card p {
+    font-weight: 500;
 
 }
-.Card>img{
-    width:100%;
-    /* height: 50%;
-    border-radius: 50px; */
+
+.Card>img {
+    width: 100%;
+    height: 60%;
+    /* border-radius: 50px; */
 }
 
-.restaro-list{
+.restaro-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin:  0px 120px;
 }
 
-.search-Container > input{
+.search-Container>input {
 
     width: 300px;
     height: 59px;
@@ -70,11 +83,12 @@
     box-shadow: 5px 5px 2px rgba(130, 130, 130, 0.525);
 }
 
-.cuisines{
+.cuisines {
     font-size: small;
     line-height: 1rem;
 }
-.Shimmer{
+
+.Shimmer {
     width: 200px;
     height: 300px;
     border: 1px solid;
@@ -82,4 +96,15 @@
     margin: 10px;
     line-height: 0.2rem;
     background-color: rgb(140, 140, 140);
+}
+
+.Rating {
+    align-items: center;
+    width: 15px;
+    padding: 5px;
+}
+
+.avgRating {
+    display: flex;
+    align-items: center;
 }
