@@ -4,13 +4,7 @@ import { Link } from "react-router-dom";
 
 
 
-
-
 export const HeaderComponent = () => {
-
-
-
-
     return (
         <>
 
@@ -18,6 +12,7 @@ export const HeaderComponent = () => {
                 <img src={ZomatoLogo} alt="" className="logo" />
 
                 <ul>
+                    <li> <Link to="/Search">🔍Search</Link></li>
                     <li> <Link to="/">Home</Link></li>
                     <li> <Link to="/About">About us</Link></li>
                     <li><Link to="/Contact">Contact</Link></li>

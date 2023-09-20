@@ -10,6 +10,7 @@ import Error from "./component/ErrorPage.js";
 import Contact from "./component/Contact.js";
 import RestaurantMenu from './component/RestaurantMenu.js';
 import ClassComp from './component/ClassComp.js';
+import Search from './component/Search.js';
 
 
 
@@ -33,6 +34,12 @@ const appRouter = createBrowserRouter([
                 path: "/",
                 element: <Body />,
                 errorElement: <Error />
+            },
+            {
+                path:"/Search",
+                element:<Search/>,
+                errorElement:<Error/>
+
             },
             {
                 path: "/About",

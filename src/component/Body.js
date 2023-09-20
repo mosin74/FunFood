@@ -3,10 +3,11 @@ import Offer from "./Offer";
 import RestroCard from "./RestaurantCard";
 import { useEffect, useState } from 'react'
 import Shimmer from "./Shimmer";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { filterData } from "../../utils/Helper";
 import { Restaurants_URL } from "../config";
 import Mind from "./OnMind";
+import Api from "./Api";
 
 const Body = () => {
 
@@ -30,10 +31,10 @@ const Body = () => {
     const [Filteredrestaurants, setFilteredRestaurants] = useState(null);
 
 
-    // if (setFilteredRestaurants.length===0) {
-    //     return <h1>No Result Found</h1>
+    // // if (setFilteredRestaurants.length===0) {
+    // //     return <h1>No Result Found</h1>
 
-    // }
+    // // }
 
 
 
@@ -54,13 +55,17 @@ const Body = () => {
 
 
 
+    // useEffect(() => {
+    //     getRestaurant();
+    // }, []);
+
 
     return (<>
         {
             (!Filteredrestaurants) ? (<Shimmer />) :
                 (
                     <>
-                        <div className="search-Container">
+                        {/* <div className="search-Container">
                             <input type="text"
                                 className="SearchInput"
                                 placeholder="Search for restaurant , cuisine or dish"
@@ -76,7 +81,7 @@ const Body = () => {
 
                             }}>
                                 Search</button>
-                        </div>
+                        </div> */}
 
                         <h2 className="Heading">Best offers for you</h2>
 
@@ -91,9 +96,9 @@ const Body = () => {
                         <h2 className="Heading">What's on your mind?</h2>
 
                         <div className="OnMind">
-                            {MindSection.map((OnMind)=>{
-                                return(
-                                    <Mind{...OnMind}/>
+                            {MindSection.map((OnMind) => {
+                                return (
+                                    <Mind{...OnMind} />
                                 )
                             })}
                         </div>
@@ -110,7 +115,6 @@ const Body = () => {
 
                         </div>
                     </>
-
                 )
         }
     </>)

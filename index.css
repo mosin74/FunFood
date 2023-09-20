@@ -9,7 +9,6 @@
 .nav-bar {
 
     width: 100%;
-
     border: 1px solid;
     display: flex;
     justify-content: space-between;
@@ -27,7 +26,6 @@
     padding: 20px;
     font-size: 20px;
     font-weight: bold;
-
 
 }
 
@@ -59,10 +57,24 @@ h {
 }
 
 
+.Search-OnMind {
+    display: flex;
+    justify-content: first baseline;
+    overflow: hidden;
+    margin: 0px 120px;
+    border-bottom: 1px solid rgba(50, 50, 50, 0.365);
+}
+
+.Search-OnMind>img,
+h {
+    width: 90px
+}
+
+
 .Heading {
     margin: 0px 120px;
     padding: 15px 0px 10px 30px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgba(0, 0, 0, 0.662);
 }
 
@@ -114,13 +126,24 @@ p1 {
 
 }
 
-.search-Container>input {
-
-    width: 300px;
-    height: 59px;
+.search-Container {
+    display: flex;
     justify-content: center;
-    box-shadow: 5px 5px 2px rgba(130, 130, 130, 0.525);
+    margin: 60px 200px;
+    justify-content:space-around;
+    justify-items: center;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 3px 4px;
+    padding-bottom: 10px;
+
 }
+
+.search-Container>input {
+    width: 500px;
+    height: 25px;
+   text-decoration: none;
+    border: none;
+}
+
 
 .cuisines {
     font-size: small;
