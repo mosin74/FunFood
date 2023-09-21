@@ -1,5 +1,7 @@
 * {
     text-decoration: none;
+    margin: 0px;
+    padding: 0px;
 }
 
 .logo {
@@ -7,9 +9,11 @@
 }
 
 .nav-bar {
-
+    height: 60px;
     width: 100%;
-    border: 1px solid;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 3px 4px;
+    /* border: 1px solid; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,7 +27,7 @@
 }
 
 .nav-bar>ul>li {
-    padding: 20px;
+    padding: 40px;
     font-size: 20px;
     font-weight: bold;
 
@@ -130,7 +134,7 @@ p1 {
     display: flex;
     justify-content: center;
     margin: 60px 200px;
-    justify-content:space-around;
+    justify-content: space-around;
     justify-items: center;
     box-shadow: rgba(0, 0, 0, 0.18) 0px 3px 4px;
     padding-bottom: 10px;
@@ -140,7 +144,7 @@ p1 {
 .search-Container>input {
     width: 500px;
     height: 25px;
-   text-decoration: none;
+    text-decoration: none;
     border: none;
 }
 
@@ -175,4 +179,60 @@ p1 {
 
 h3 {
     font-size: 15px;
+}
+
+
+.Help {
+    margin: 0px;
+    width: 100%;
+    /* margin-top: 10px; */
+    height: fit-content;
+    background-color: #37718e;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    padding-top: 20px;
+}
+
+.Help-Sub {
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-around;
+    margin: 70px 0px 0px 30px;
+    background-color: white;
+    height: fit-content;
+}
+
+.Help-Left-Div {
+    width: 20%;
+    background-color: rgb(70, 70, 70);
+}
+
+.Help-Right-Div {
+
+    width: 80%;
+}
+
+.Help-Right-Div>h2 {
+    padding: 10px 10px 20px;
+    /* width: 600px; */
+}
+
+.Help-p {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 10px;
+    width: 700px;
+}
+
+.Help-Ans {
+    padding: 10px;
+    font-size: 16px;
+    width: 700px;
+    color: rgba(46, 46, 46, 0.799);
+}
+
+
+.UpperBody {
+    padding: 70px 70px 0px;
 }

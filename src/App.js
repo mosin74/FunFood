@@ -11,6 +11,7 @@ import Contact from "./component/Contact.js";
 import RestaurantMenu from './component/RestaurantMenu.js';
 import ClassComp from './component/ClassComp.js';
 import Search from './component/Search.js';
+import Help from './component/Help.js';
 
 
 
@@ -24,6 +25,12 @@ const AppLayout = () => (
     </>
 );
 
+const HelpSupport = () => (
+    <>
+        <HeaderComponent />
+        <Help/>
+    </>);
+
 const appRouter = createBrowserRouter([
     {
         path: "/",
@@ -36,17 +43,17 @@ const appRouter = createBrowserRouter([
                 errorElement: <Error />
             },
             {
-                path:"/Search",
-                element:<Search/>,
-                errorElement:<Error/>
+                path: "/Search",
+                element: <Search />,
+                errorElement: <Error />
 
             },
             {
                 path: "/About",
-                element: 
-                <Suspense fallback="Loading....">
-                    <About />
-                </Suspense>,
+                element:
+                    <Suspense fallback="Loading....">
+                        <About />
+                    </Suspense>,
                 errorElement: <Error />
             },
             {
@@ -67,7 +74,12 @@ const appRouter = createBrowserRouter([
                 errorElement: <Error />
             },
         ]
-
+        
+    },
+    {
+        path: "/Help",
+        element: <HelpSupport/>,
+        errorElement: <Error />
     },
 
 ])
