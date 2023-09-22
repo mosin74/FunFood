@@ -1,7 +1,24 @@
+.light-them{
+    --baground-color:rgb(255, 255, 255);
+    --Nav-item:black;
+
+}
+.dark-them{
+    --baground-color:rgb(3, 79, 112);
+    --Nav-item:white;
+    
+}
+
+.Them-logo{
+    width: 30px;
+    padding-right: 40px;
+}
 * {
+    background-color:var(--baground-color);
     text-decoration: none;
     margin: 0px;
     padding: 0px;
+    color: var(--Nav-item);
 }
 
 .logo {
@@ -17,6 +34,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--baground-color);
+    overflow: hidden;
 
 }
 
@@ -30,9 +49,13 @@
     padding: 40px;
     font-size: 20px;
     font-weight: bold;
+    color:var(--Nav-item)
 
 }
-
+.Link{
+    text-decoration: none;
+    color: var(--Nav-item);
+}
 .Offer {
     margin: 0px 120px;
     display: flex;
@@ -76,7 +99,7 @@ h {
 
 
 .Heading {
-    margin: 0px 120px;
+    margin: 20px 120px;
     padding: 15px 0px 10px 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgba(0, 0, 0, 0.662);
