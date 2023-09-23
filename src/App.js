@@ -12,7 +12,8 @@ import RestaurantMenu from './component/RestaurantMenu.js';
 import ClassComp from './component/ClassComp.js';
 import Search from './component/Search.js';
 import Help from './component/Help.js';
-
+// import { Provider } from 'react-redux';
+// import store from '../utils/Store.js';
 
 
 const About = lazy(() => import("./component/About"));
@@ -28,7 +29,7 @@ const AppLayout = () => (
 const HelpSupport = () => (
     <>
         <HeaderComponent />
-        <Help/>
+        <Help />
     </>);
 
 const appRouter = createBrowserRouter([
@@ -74,11 +75,11 @@ const appRouter = createBrowserRouter([
                 errorElement: <Error />
             },
         ]
-        
+
     },
     {
         path: "/Help",
-        element: <HelpSupport/>,
+        element: <HelpSupport />,
         errorElement: <Error />
     },
 

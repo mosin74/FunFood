@@ -14,6 +14,7 @@ const RestaurantMenu = () => {
                 <h1>id:{id}</h1>
                 <h2>{Menu.name}</h2>
                 <img src={IMG_CDN_URL+Menu.imageId} alt=""/>
+                <p></p>
                 {/* <img src=""/> */}
             </div>
         </>
