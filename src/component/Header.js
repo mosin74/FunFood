@@ -15,7 +15,7 @@ export const HeaderComponent = () => {
         <>
 
             <div className="nav-bar">
-                <Link to="/"><img src={ZomatoLogo} alt="" className="logo" /></Link>
+                <Link to="/"><img src={ZomatoLogo} alt="" className="logo" data-testid="logo"/></Link>
 
                 <ul>
                     <li> <Link to="/Search" className="Link">🔍Search</Link></li>

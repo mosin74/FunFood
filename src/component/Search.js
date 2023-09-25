@@ -35,7 +35,7 @@ const Search = () => {
             {
                 (!MindSection) ? (<Shimmer />) :
                     (<>
-                        <div className="search-Container">
+                        <div className="search-Container" data-testid="Search">
                             <input type="text"
                                 className="SearchInput"
                                 placeholder="Search for restaurant , cuisine or dish...."
@@ -53,7 +53,7 @@ const Search = () => {
                                 🔍</p>
                         </div>
                         <h2 className="Heading">Popular Cuisines</h2>
-                        <div className="OnMind Search-OnMind">
+                        <div className="OnMind Search-OnMind" data-testid="OnMind">
                             {MindSection.map((OnMind) => {
                                 return (
                                     <Mind{...OnMind} />

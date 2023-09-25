@@ -26,11 +26,11 @@ const DarkThem = () => {
         {
             isDarkTrue?
                 <>
-                    <img className="Them-logo"onClick={() =>{setDark("light-them"); setDarkTrue(false)}} src={logo2} alt="light" />
+                    <img className="Them-logo"onClick={() =>{setDark("light-them"); setDarkTrue(false)}} src={logo2} alt="light" data-testid="ThemLogo"/>
                 </>
                 :
                 <>
-                    <img className="Them-logo"onClick={() =>{setDark("dark-them") ; setDarkTrue(true)}} src={logo1}alt="Dark" />
+                    <img className="Them-logo"onClick={() =>{setDark("dark-them") ; setDarkTrue(true)}} src={logo1}alt="Dark" data-testid="ThemLogo" />
                 </>
         }
     </>)
