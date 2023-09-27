@@ -1,27 +1,24 @@
-import { useState , useEffect } from "react"
-import { Menu_URL } from "../src/config"
+import { useState, useEffect } from "react"
+import { Menu_URL, Restaurants_URL } from "../src/config"
 
 
 
-const useMenu = (id) =>{
-  const [Menu ,setMenu] = useState({});
-  
+const useMenu = (id) => {
+  const [menuList, setMenulist] = useState([]);
+
   useEffect(() => {
     getRestaurantMenu();
-}, []);
+  }, []);
 
-async function getRestaurantMenu()
- {
+  async function getRestaurantMenu() {
     const data = await fetch(Menu_URL+id);
     const json = await data.json();
-    setMenu(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards[0]?.card?.info);
-    // setMenu(json?.data?.cards[5]?.gridElements?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards[0]?.card?.info);
+    // setMenu(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setMenulist(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
 
+  }
 
-    console.log(json.data);
-}
-
-return Menu;
+  return menuList;
 
 };
 export default useMenu;

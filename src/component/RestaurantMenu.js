@@ -1,24 +1,14 @@
 
-// import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { IMG_CDN_URL } from "../config";
-import useMenu from "../../utils/useMenu";
+import MenuRecomandation from "./MenuRecomandation"
+import RestroDetail from "./DetailOfRestro";
+const RestroMenu = () => {
+    return (<>
 
 
-const RestaurantMenu = () => {
-    const { id } = useParams();
-    const Menu = useMenu(id);
-    return (
-        <>
-            <div>
-                <h1>id:{id}</h1>
-                <h2>{Menu.name}</h2>
-                <img src={IMG_CDN_URL+Menu.imageId} alt=""/>
-                <p></p>
-                {/* <img src=""/> */}
-            </div>
-        </>
-    )
+        <RestroDetail />
+        <MenuRecomandation />
+    </>)
 }
 
-export default RestaurantMenu;
+
+export default RestroMenu;
