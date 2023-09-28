@@ -11,12 +11,12 @@ import useOff from "../../utils/useOff";
 const Body = () => {
 
 
+    const OffSection = useOff();
     const Restro = useRestrolist();
     const MindSection = useMind();
-    const OffSection = useOff();
     return (<>
         {
-            (!Restro) ? (<Shimmer />) :
+            (!OffSection) ? (<Shimmer />) :
                 (
                     <>
                         <h2 className="Heading">Best offers for you</h2>
@@ -30,26 +30,29 @@ const Body = () => {
                             }
                         </div>
                         <h2 className="Heading">What's on your mind?</h2>
-
-                        <div className="OnMind">
-                            {MindSection.map((OnMind) => {
-                                return (
-                                    <Mind{...OnMind} />
-                                )
-                            })}
-                        </div>
+                        {(!MindSection) ? (<Shimmer />) : (
+                            <div className="OnMind">
+                                {MindSection.map((OnMind) => {
+                                    return (
+                                        <Mind{...OnMind} />
+                                    )
+                                })}
+                            </div>)
+                        }
                         <h2 className="Heading">Restaurants with online food delivery in Indore</h2>
-                        <div className='restaro-list' >
-                            {Restro.map((restaurants) => {
-                                return (
-                                    <Link to={"/restaurant/" + restaurants.info.feeDetails.restaurantId}>
-                                        <RestroCard {...restaurants.info} />
-                                    </Link>
-                                )
-                            })
-                            }
+                        {(!Restro) ? (<Shimmer />) : (
+                            <div className='restaro-list' >
+                                {Restro.map((restaurants) => {
+                                    return (
+                                        <Link to={"/restaurant/" + restaurants.info.feeDetails.restaurantId}>
+                                            <RestroCard {...restaurants.info} />
+                                        </Link>
+                                    )
+                                })
+                                }
 
-                        </div>
+                            </div>)
+                        }
                     </>
                 )
         }

@@ -4,9 +4,10 @@ import RestroDetail from "./DetailOfRestro";
 const RestroMenu = () => {
     return (<>
 
-
-        <RestroDetail />
-        <MenuRecomandation />
+        <div className="Menu">
+            <RestroDetail />
+            <MenuRecomandation />
+        </div>
     </>)
 }
 
