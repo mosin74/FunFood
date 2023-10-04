@@ -25,7 +25,7 @@ const RestroDetail = () => {
         <>
 
         <div className="Menu-Start">
-                <p>All right reserved </p>
+                <p><Link to="/"><span>Home   </span></Link>{"     /    "}{information?.name}</p>
                 <Link to="/Search"> <img src="https://tse4.mm.bing.net/th?id=OIP.9-l9QQfhMfbvYNTRGgp30gHaHa&pid=Api&P=0&h=180" alt="Search" className="Menu-Start-Img" /></Link>
         </div>
             <div className="Menu-Detail">

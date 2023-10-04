@@ -5,6 +5,7 @@ import { Restaurants_URL } from "../config";
 import { filterData } from "../../utils/Helper";
 import Shimmer from "./Shimmer";
 
+import { IMG_CDN_URL } from "../config";
 
 const Search = () => {
 
@@ -23,10 +24,13 @@ const Search = () => {
     async function getSerchDish() {
         const data = await fetch(Restaurants_URL);
         const json = await data.json();
-        // setRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        // setFilteredRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setFilteredRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         SetMindSection(json?.data?.cards[1]?.card?.card?.imageGridCards?.info)
     }
+
+    // console.log(restaurants);
+    // console.log(Filteredrestaurants);
 
 
 
@@ -40,18 +44,34 @@ const Search = () => {
                                 className="SearchInput"
                                 placeholder="Search for restaurant , cuisine or dish...."
                                 value={searchText}
-                            // onChange={(e) => {
-                            //     setSearchText(e.target.value);
-                            // }}
+                                onChange={(e) => {
+                                    setSearchText(e.target.value);
+                                }}
+
                             />
 
                             <p onClick={() => {
-                                // const Data = filterData(searchText, restaurants);
-                                // setFilteredRestaurants(Data);
-
+                                const Data = filterData(searchText, restaurants);
+                                setFilteredRestaurants(Data);
                             }}>
                                 🔍</p>
                         </div>
+                        {(searchText == null) ? (null) : (
+
+                            <>
+                                {Filteredrestaurants.map((List) => {
+                                    return (
+                                        <div className="Search-restro ">
+                                            <p>{List.info.name}</p>
+                                            <img className="Search-restro-Img" src={IMG_CDN_URL +List.info.cloudinaryImageId} />
+                                        </div>
+                                    )
+
+
+                                })}
+
+                            </>
+                        )}
                         <h2 className="Heading">Popular Cuisines</h2>
                         <div className="OnMind Search-OnMind" data-testid="OnMind">
                             {MindSection.map((OnMind) => {
@@ -59,6 +79,7 @@ const Search = () => {
                                     <Mind{...OnMind} />
                                 )
                             })}
+
                         </div>
                     </>)
             }

@@ -12,25 +12,32 @@ import RestaurantMenu from './component/RestaurantMenu.js';
 import ClassComp from './component/ClassComp.js';
 import Search from './component/Search.js';
 import Help from './component/Help.js';
-// import { Provider } from 'react-redux';
-// import store from '../utils/Store.js';
+import { Provider } from 'react-redux';
+import store from './component/Store.js';
+import CartPage from './component/cartPage.js';
+
 
 
 const About = lazy(() => import("./component/About"));
 
 const AppLayout = () => (
-    <>
+    <><Provider store={store}>
+
         <HeaderComponent />
         <Outlet />
         <FooterComponent />
+    </Provider>
     </>
 );
 
 const HelpSupport = () => (
     <>
-        <HeaderComponent />
-        <Help />
-    </>);
+        <Provider store={store}>
+            <HeaderComponent />
+            <Help />
+        </Provider>
+    </>
+);
 
 const appRouter = createBrowserRouter([
     {
@@ -74,6 +81,12 @@ const appRouter = createBrowserRouter([
                 element: <RestaurantMenu />,
                 errorElement: <Error />
             },
+            {
+                path: "/cart",
+                element: <CartPage/>,
+                errorElement: <Error />
+
+            },
         ]
 
     },
@@ -89,6 +102,6 @@ const appRouter = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-// root.render(<AppLayout />);// for rendaring react element 
+// root.render(<AppLayout />);// for rendaring react element
 
 root.render(<RouterProvider router={appRouter} />);

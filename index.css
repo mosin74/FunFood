@@ -276,24 +276,27 @@ h3 {
     /* padding-bottom: 20px; */
 
 }
-.detail>p{
+
+.detail>p {
     font-size: 13px;
     color: rgba(128, 128, 128, 0.662);
     padding: 3px 0px;
 }
 
-.Menu-Start{
+.Menu-Start {
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 20px;
     padding-bottom: 20px;
 }
-.Menu-Start>p{
+
+.Menu-Start>p {
     color: rgba(128, 128, 128, 0.639);
     font-size: 12px;
 }
-.Menu-Start-Img{
+
+.Menu-Start-Img {
     width: 100%;
     height: 20px;
 }
@@ -302,10 +305,12 @@ h3 {
     padding: 15px 8px;
     border: 1px solid rgba(128, 128, 128, 0.263);
 }
-.Menu-right>p,span{
+
+.Menu-right>p,
+span {
     font-size: 12px;
     color: rgba(128, 128, 128, 0.801);
-    
+
 }
 
 .Menu-hr {
@@ -320,9 +325,10 @@ h3 {
     justify-content: space-between;
 }
 
-.Menu-Recommendation-Left{
-padding-right: 20px;
+.Menu-Recommendation-Left {
+    padding-right: 20px;
 }
+
 .Menu-Recommendation-Left>h3 {
     font-size: 18px;
     font-family: sans-serif;
@@ -330,9 +336,10 @@ padding-right: 20px;
     padding: 10px 0px;
 }
 
-.Menu-Recommendation-Left>p{
+.Menu-Recommendation-Left>p {
     padding-bottom: 15px;
 }
+
 .Menu-Recommendation-Left>p1 {
     font-size: 14px;
     margin-right: 20px;
@@ -340,17 +347,19 @@ padding-right: 20px;
     color: rgba(122, 122, 122, 0.667);
 }
 
-.Menu-Recommendation-Right{
+.Menu-Recommendation-Right {
     width: 118px;
     height: 96px;
 }
+
 .Menu-Recommendation-Img {
     position: relative;
     width: 118px;
     height: 96px;
     border-radius: 10px;
 }
-.Menu-Recommendation-Right-Button{
+
+.Menu-Recommendation-Right-Button {
     color: #60b246;
     border: none;
     bottom: 28px;
@@ -360,3 +369,21 @@ padding-right: 20px;
     box-shadow: 0 3px 4px #0000002e;
 }
 
+.Search-restro {
+    display: flex;
+    justify-content: center;
+    margin: 0px 200px 0px;
+    /* justify-content: space-around; */
+    justify-items: center;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 1px 2px;
+    padding: 5px 40px;
+    justify-content: space-between;
+
+    position:static;
+}
+
+.Search-restro-Img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
