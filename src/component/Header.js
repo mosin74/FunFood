@@ -21,12 +21,12 @@ const cartItems=useSelector(store=>store.cart.items);
                 <Link to="/"><img src={ZomatoLogo} alt="" className="logo" data-testid="logo"/></Link>
 
                 <ul>
-                    <li> <Link to="/Search" className="Link"><img src="https://tse4.mm.bing.net/th?id=OIP.9-l9QQfhMfbvYNTRGgp30gHaHa&pid=Api&P=0&h=180" alt="Search" className="Menu-Start-Img" /></Link></li>
+                    <li> <Link to="/Search" className="Link"><img src="https://tse4.mm.bing.net/th?id=OIP.9-l9QQfhMfbvYNTRGgp30gHaHa&pid=Api&P=0&h=180" alt="Search" className="Menu-Start-Img" /><span className="navbar-li-span">Search</span></Link></li>
                     {/* <li> <Link to="/">Home</Link></li> */}
-                    <li> <Link to="/Help" className="Link">Help</Link></li>
+                    <li> <Link to="/Help" className="Link"><img src="https://cdn4.iconfinder.com/data/icons/vectory-symbols/40/help_2-512.png" alt="Search" className="Menu-Start-Img" /><span className="navbar-li-span">Help</span></Link></li>
                     {/* <li> <Link to="/About">About us</Link></li> */}
                     {/* <li><Link to="/Contact">Contact</Link></li> */}
-                    <li><Link to="/Cart" className="Link">{cartItems.length} Cart</Link></li>
+                    <li><Link to="/Cart" className="Link"><span className="cart-li-span">{cartItems.length}</span>Cart</Link></li>
                 </ul>
                 <DarkThem/>
             </div>

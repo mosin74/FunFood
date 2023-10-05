@@ -49,14 +49,33 @@
 
 .nav-bar>ul>li {
     padding: 40px;
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--Nav-item)
+    /* font-weight: bold; */
+    color: var(--Nav-item);
+    font-size: 16px;
+    font-family: 'ProximaNova','arial','Helvetica Neue',sans-serif;
+  
 }
 
+.navbar-li-span {
+
+    font-size: 16px;
+    /* justify-content: space-between; */
+    padding-left: 20px;
+    color:var(--Nav-item);
+}
+
+.cart-li-span{
+    font-size: 16px;
+    padding: 3px 5px;
+    margin-right: 15px;
+    background-color: #60b246;
+    color: aliceblue;
+}
 .Link {
     text-decoration: none;
     color: var(--Nav-item);
+    display: flex;
+
 }
 
 .Offer {
@@ -379,7 +398,7 @@ span {
     padding: 5px 40px;
     justify-content: space-between;
 
-    position:static;
+    position: static;
 }
 
 .Search-restro-Img {
