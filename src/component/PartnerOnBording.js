@@ -2,6 +2,7 @@ import { useState } from "react"
 
 const Section= ({ title, info, isVisible, SetisVisble }) => {
     return (
+        <>
         <div className="Help-p">
             <p className>{title}</p>
             {
@@ -13,7 +14,7 @@ const Section= ({ title, info, isVisible, SetisVisble }) => {
                         }}>
                             Hide</button>
                         <p className="Help-Ans">{info}</p>
-                    </>
+                </>
                     :
                     <>
                         <button onClick={() => {
@@ -24,6 +25,7 @@ const Section= ({ title, info, isVisible, SetisVisble }) => {
             }
                 <hr></hr>
         </div>
+        </>
     )
 }
 
@@ -34,7 +36,9 @@ const Section= ({ title, info, isVisible, SetisVisble }) => {
 const OnBording = () => {
     const [VisibleOnBording, setVisibleOnBording] = useState("");
     return (<>
-
+<h2>
+        Partner Onboarding
+    </h2>
         <Section
             title="What are the mandatory documents needed to list my restaurant on Swiggy?"
             info="-Copies of the below documents are mandator

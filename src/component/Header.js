@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import DarkThem from "./DarkThem";
 import { useSelector } from "react-redux";
 import store from "./Store";
-
+import Logo  from "../Images/Logo.png"
 // const [Dark,SetDark]=useState()
 
 export const HeaderComponent = () => {
@@ -18,7 +18,7 @@ const cartItems=useSelector(store=>store.cart.items);
         <>
 
             <div className="nav-bar">
-                <Link to="/"><img src={ZomatoLogo} alt="" className="logo" data-testid="logo"/></Link>
+                <Link to="/"><img src={Logo} alt="" className="logo" data-testid="logo"/></Link>
 
                 <ul>
                     <li> <Link to="/Search" className="Link"><img src="https://tse4.mm.bing.net/th?id=OIP.9-l9QQfhMfbvYNTRGgp30gHaHa&pid=Api&P=0&h=180" alt="Search" className="Menu-Start-Img" /><span className="navbar-li-span">Search</span></Link></li>

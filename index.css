@@ -1,3 +1,4 @@
+
 .light-them {
     --baground-color: rgb(255, 255, 255);
     --Nav-item: black;
@@ -21,14 +22,15 @@
     margin: 0px;
     padding: 0px;
     color: var(--Nav-item);
+    font-family: 'ProximaNova','arial','Helvetica Neue',sans-serif;
 }
 
 .logo {
-    width: 150px;
+    width: 100px;
 }
 
 .nav-bar {
-    height: 60px;
+    height: 70px;
     width: 100%;
     z-index: 1;
     box-shadow: rgba(0, 0, 0, 0.18) 0px 3px 4px;
@@ -249,7 +251,21 @@ h3 {
 
 .Help-Left-Div {
     width: 20%;
-    background-color: rgb(70, 70, 70);
+    padding: 50px 0px 0px 50px;
+}
+.Help-Left-Div-h1{
+    background-color:#edf1f7;
+    padding: 10px;
+    color: rgb(210, 210, 210);
+    height:100%;
+
+}
+.Help-Left-Div-h1>Link>h1{
+    background-color:#000000;
+    /* padding: 20px;
+    font-size: 16px; */
+
+
 }
 
 .Help-Right-Div {

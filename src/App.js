@@ -34,7 +34,8 @@ const HelpSupport = () => (
     <>
         <Provider store={store}>
             <HeaderComponent />
-            <Help />
+            {/* <Help /> */}
+            <Outlet/>
         </Provider>
     </>
 );
@@ -93,7 +94,14 @@ const appRouter = createBrowserRouter([
     {
         path: "/Help",
         element: <HelpSupport />,
-        errorElement: <Error />
+        errorElement: <Error />,
+        children:[
+            {
+                path:"/Help",
+                element:<Help/>,
+                errorElement: <Error />
+            }
+        ]
     },
 
 ])

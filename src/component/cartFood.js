@@ -6,7 +6,6 @@ const CartFood = ({name,price,description,imageId}) => {
             <div className="Menu-Recommendation">
 
                 <div className="Menu-Recommendation-Left">
-                    {/* <p>{Menu.card?.}</p> */}
                     <h3>{name}</h3>
                     <p>₹ {price/100}</p>
                     <p1>{description}</p1>

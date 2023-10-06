@@ -1,4 +1,5 @@
 import OnBording from "./PartnerOnBording";
+import { Link } from "react-router-dom";
 
 const Help = () => {
     return (
@@ -10,11 +11,15 @@ const Help = () => {
                 </div>
                 <div className="Help-Sub">
                     <div className="Help-Left-Div">
+                        <div className="Help-Left-Div-h1">
+
+                            <Link to="/Help"><h1>Partner Onboarding</h1></Link>
+                            <Link to="/Help/legal"><h1>Legal</h1></Link>
+                            <Link to="/Help/FAQS"> <h1>FAQs</h1></Link>
+                        </div>
+
                     </div>
                     <div className="Help-Right-Div">
-                        <h2>
-                            Partner Onboarding
-                        </h2>
                         <OnBording />
                     </div>
                 </div>
