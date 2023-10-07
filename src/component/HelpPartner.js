@@ -1,7 +1,7 @@
 import OnBording from "./PartnerOnBording";
 import { Link } from "react-router-dom";
 
-const Help = () => {
+const HelpPartner = () => {
     return (
         <>
             <div className="Help">
@@ -13,9 +13,9 @@ const Help = () => {
                     <div className="Help-Left-Div">
                         <div className="Help-Left-Div-h1">
 
-                            <Link to="/Help"><h1>Partner Onboarding</h1></Link>
-                            <Link to="/Help/legal"><h1>Legal</h1></Link>
-                            <Link to="/Help/FAQS"> <h1>FAQs</h1></Link>
+                            <Link to="/Help"><h1 className="Help-Left-Div-h1-h1">Partner Onboarding</h1></Link>
+                            <Link to="/Help/legal"><h1 className="Help-Left-Div-h1-h1">Legal</h1></Link>
+                            <Link to="/Help/FAQS"> <h1 className="Help-Left-Div-h1-h1">FAQs</h1></Link>
                         </div>
 
                     </div>
@@ -28,4 +28,4 @@ const Help = () => {
     )
 }
 
-export default Help;
+export default HelpPartner;

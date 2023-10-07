@@ -260,13 +260,13 @@ h3 {
     height:100%;
 
 }
-.Help-Left-Div-h1>Link>h1{
-    background-color:#000000;
-    /* padding: 20px;
-    font-size: 16px; */
-
-
+.Help-Left-Div-h1-h1{
+    background-color:transparent;
+    padding: 20px;
+    font-size: 16px;
 }
+
+
 
 .Help-Right-Div {
 
@@ -284,6 +284,7 @@ h3 {
     font-weight: 500;
     padding-left: 10px;
     width: 700px;
+    /* display: flex; */
 }
 
 .Help-Ans {
@@ -296,8 +297,12 @@ h3 {
 
 .UpperBody {
     padding: 70px 70px 0px;
+    background-color: transparent;
 }
+.UpperBody>h1,p{
+    background-color: transparent;
 
+}
 .Menu {
 
     margin: 50px 250px;
@@ -381,7 +386,9 @@ span {
     /* margin: 20px opx; */
     color: rgba(122, 122, 122, 0.667);
 }
-
+.Menu-Recommendation-Right-Button{
+    background-color: white;
+}
 .Menu-Recommendation-Right {
     width: 118px;
     height: 96px;
@@ -421,4 +428,15 @@ span {
     width: 60px;
     height: 60px;
     border-radius: 10px;
+}
+
+button{
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 3px 4px;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    background-color: black;
+
 }

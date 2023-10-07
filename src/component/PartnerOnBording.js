@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const Section= ({ title, info, isVisible, SetisVisble }) => {
+const Section= ({ title, info, isVisible, SetisVisble , isHide }) => {
     return (
         <>
         <div className="Help-p">
@@ -10,7 +10,7 @@ const Section= ({ title, info, isVisible, SetisVisble }) => {
                     <>
 
                         <button onClick={() => {
-                            SetisVisble(false)
+                            isHide(false)
                         }}>
                             Hide</button>
                         <p className="Help-Ans">{info}</p>
@@ -54,30 +54,39 @@ const OnBording = () => {
                   -  Menu"
             isVisible={VisibleOnBording === "1"}
             SetisVisble={() => setVisibleOnBording("1")}
+            isHide={()=>{setVisibleOnBording(false)}}
         />
         <Section
             title="After I submit all documents, how long will it take for my restaurant to go live on Swiggy?"
             info="After all mandatory documents have been received and verified it takes upto 7-10 working days for the onboarding to be completed and make your restaurant live on the platform."
             isVisible={VisibleOnBording === "3"}
             SetisVisble={() => setVisibleOnBording("3")}
+            isHide={()=>{setVisibleOnBording(false)}}
+
         />
         <Section
             title="What is this one time Onboarding fees? Do I have to pay for it while registering?"
             info="This is a one-time fee charged towards the system & admin costs incurred during the onboarding process. It is deducted from the weekly payouts after you start receiving orders from Swiggy."
             isVisible={VisibleOnBording==="4"}
             SetisVisble={() => setVisibleOnBording("4")}
+            isHide={()=>{setVisibleOnBording(false)}}
+
         />
                 <Section
             title="How much commission will I be charged by Swiggy?"
             info="The commission charges vary for different cities. You will be able to see the commission applicable for you once the preliminary onboarding details have been filled."
             isVisible={VisibleOnBording==="5"}
             SetisVisble={() => setVisibleOnBording("5")}
+            isHide={()=>{setVisibleOnBording(false)}}
+
         />
                         <Section
             title="I don’t have an FSSAI licence for my restaurant. Can it still be onboarded?"
             info="FSSAI licence is a mandatory requirement according to the government’s policies. However, if you are yet to receive the licence at the time of onboarding, you can proceed with the acknowledgement number which you will have received from FSSAI for your registration."
             isVisible={VisibleOnBording==="6"}
             SetisVisble={() => setVisibleOnBording("6")}
+            isHide={()=>{setVisibleOnBording(false)}}
+
         />
     </>)
 }

@@ -11,10 +11,13 @@ import Contact from "./component/Contact.js";
 import RestaurantMenu from './component/RestaurantMenu.js';
 import ClassComp from './component/ClassComp.js';
 import Search from './component/Search.js';
-import Help from './component/Help.js';
+import HelpPartner from './component/HelpPartner.js';
 import { Provider } from 'react-redux';
 import store from './component/Store.js';
 import CartPage from './component/cartPage.js';
+import HelpLegal from './component/HelpLegal.js';
+import HelpFAQS from './component/HelpFAQS.js';
+
 
 
 
@@ -35,7 +38,11 @@ const HelpSupport = () => (
         <Provider store={store}>
             <HeaderComponent />
             {/* <Help /> */}
-            <Outlet/>
+            <Outlet />
+            {/* <HelpFAQS/> */}
+            {/* <Help/> */}
+        {/* <FooterComponent /> */}
+
         </Provider>
     </>
 );
@@ -84,7 +91,7 @@ const appRouter = createBrowserRouter([
             },
             {
                 path: "/cart",
-                element: <CartPage/>,
+                element: <CartPage />,
                 errorElement: <Error />
 
             },
@@ -93,13 +100,25 @@ const appRouter = createBrowserRouter([
     },
     {
         path: "/Help",
-        element: <HelpSupport />,
+        element: <HelpSupport/>,
         errorElement: <Error />,
-        children:[
+        children: [
             {
-                path:"/Help",
-                element:<Help/>,
+                path: "/Help",
+                element: <HelpPartner />,
                 errorElement: <Error />
+            },
+            {
+                path: "/Help/legal",
+                element: <HelpLegal/>,
+                errorElement: <Error />
+
+            },
+            {
+                path: "/Help/FAQS",
+                element: <HelpFAQS/>,
+                errorElement: <Error />
+
             }
         ]
     },

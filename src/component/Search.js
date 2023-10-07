@@ -6,6 +6,7 @@ import { filterData } from "../../utils/Helper";
 import Shimmer from "./Shimmer";
 
 import { IMG_CDN_URL } from "../config";
+import { Link } from "react-router-dom";
 
 const Search = () => {
 
@@ -61,10 +62,12 @@ const Search = () => {
                             <>
                                 {Filteredrestaurants.map((List) => {
                                     return (
-                                        <div className="Search-restro ">
-                                            <p>{List.info.name}</p>
-                                            <img className="Search-restro-Img" src={IMG_CDN_URL +List.info.cloudinaryImageId} />
-                                        </div>
+                                        <Link to={"/restaurant/"+ List.info.feeDetails.restaurantId}>
+                                            <div className="Search-restro ">
+                                                <p>{List.info.name}</p>
+                                                <img className="Search-restro-Img" src={IMG_CDN_URL + List.info.cloudinaryImageId} />
+                                            </div>
+                                        </Link>
                                     )
 
 
