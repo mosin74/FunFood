@@ -41,11 +41,21 @@ const HelpSupport = () => (
             <Outlet />
             {/* <HelpFAQS/> */}
             {/* <Help/> */}
-        {/* <FooterComponent /> */}
+            {/* <FooterComponent /> */}
 
         </Provider>
     </>
 );
+
+const SearchComponenet = () => (
+    <>
+        <Provider store={store}>
+            <HeaderComponent />
+            <Search />
+        </Provider>
+    </>
+);
+
 
 const appRouter = createBrowserRouter([
     {
@@ -58,12 +68,12 @@ const appRouter = createBrowserRouter([
                 element: <Body />,
                 errorElement: <Error />
             },
-            {
-                path: "/Search",
-                element: <Search />,
-                errorElement: <Error />
+            // {
+            //     path: "/Search",
+            //     element: <Search />,
+            //     errorElement: <Error />
 
-            },
+            // },
             {
                 path: "/About",
                 element:
@@ -100,7 +110,7 @@ const appRouter = createBrowserRouter([
     },
     {
         path: "/Help",
-        element: <HelpSupport/>,
+        element: <HelpSupport />,
         errorElement: <Error />,
         children: [
             {
@@ -110,19 +120,22 @@ const appRouter = createBrowserRouter([
             },
             {
                 path: "/Help/legal",
-                element: <HelpLegal/>,
+                element: <HelpLegal />,
                 errorElement: <Error />
 
             },
             {
                 path: "/Help/FAQS",
-                element: <HelpFAQS/>,
+                element: <HelpFAQS />,
                 errorElement: <Error />
 
             }
         ]
     },
-
+    {
+        path:"/Search",
+        element:<SearchComponenet/>
+    }
 ])
 
 

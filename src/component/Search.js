@@ -7,6 +7,7 @@ import Shimmer from "./Shimmer";
 
 import { IMG_CDN_URL } from "../config";
 import { Link } from "react-router-dom";
+import MindShimmer from "./ShimmerMInd";
 
 const Search = () => {
 
@@ -38,7 +39,7 @@ const Search = () => {
     return (
         <>
             {
-                (!MindSection) ? (<Shimmer />) :
+                (!MindSection) ? (< MindShimmer/>) :
                     (<>
                         <div className="search-Container" data-testid="Search">
                             <input type="text"

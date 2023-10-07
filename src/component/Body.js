@@ -7,6 +7,8 @@ import Mind from "./OnMind";
 import useRestrolist from "../../utils/useRestrolist";
 import useMind from "../../utils/useMind";
 import useOff from "../../utils/useOff";
+import OffShimmer from "./ShimmerOff";
+import MindShimmer from "./ShimmerMInd";
 
 const Body = () => {
 
@@ -16,7 +18,7 @@ const Body = () => {
     const MindSection = useMind();
     return (<>
         {
-            (!OffSection) ? (<Shimmer />) :
+            (!OffSection) ? (<OffShimmer />) :
                 (
                     <>
                         <h2 className="Heading">Best offers for you</h2>
@@ -29,37 +31,45 @@ const Body = () => {
                             })
                             }
                         </div>
-                        <h2 className="Heading">What's on your mind?</h2>
-                        {(!MindSection) ? (<Shimmer />) : (
-                            <div className="OnMind">
-                                {MindSection.map((OnMind) => {
-                                    return (
-                                        <Mind{...OnMind} />
-                                    )
-                                })}
-                            </div>)
-                        }
-                        <h2 className="Heading">Restaurants with online food delivery in Indore</h2>
-                        {(!Restro) ? (<Shimmer />) : (
-                            <div className='restaro-list' >
-                                {Restro.map((restaurants) => {
-                                    return (
-                                        <Link to={"/restaurant/" + restaurants.info.feeDetails.restaurantId}>
-                                            <RestroCard {...restaurants.info} />
-                                        </Link>
-                                    )
-                                })
-                                }
-
-                            </div>)
-                        }
                     </>
-                )
+                )}
+
+
+        {(!MindSection) ? (<MindShimmer />) : (<>
+
+            <h2 className="Heading">What's on your mind?</h2>
+            <div className="OnMind">
+                {MindSection.map((OnMind) => {
+                    return (
+                        <Mind{...OnMind} />
+                    )
+                })}
+            </div>
+        </>)
         }
-    </>)
+        {(!Restro) ? (<Shimmer />) : (
+            <>
+        <h2 className="Heading">Restaurants with online food delivery in Indore</h2>
+            <div className='restaro-list' >
+                {Restro.map((restaurants) => {
+                    return (
+                        <Link to={"/restaurant/" + restaurants.info.feeDetails.restaurantId}>
+                            <RestroCard {...restaurants.info} />
+                        </Link>
+                    )
+                })
+                }
+
+            </div>
+            </>)
+        }
+    </>
+    )
+}
+//     </>)
 
 
-};
+// };
 
 
 export default Body;

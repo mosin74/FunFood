@@ -1,9 +1,9 @@
 const Shimmer = () => {
 
-     return (
-
-          <div data-testid="Shimmer">
-               {Array(10)
+     return (<>
+          <h2 className="Shimmer-Heading"></h2>
+          <div data-testid="Shimmer" className="ShimmerMain">
+               {Array(12)
                     .fill("")
                     .map((e, index) => (
                          <div className="Shimmer">
@@ -16,6 +16,7 @@ const Shimmer = () => {
                }
 
           </div >
+     </>
      )
 
 }
