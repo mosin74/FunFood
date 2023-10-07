@@ -271,10 +271,11 @@ h3 {
 .Help-Right-Div {
 
     width: 80%;
+
 }
 
 .Help-Right-Div>h2 {
-    padding: 10px 10px 20px;
+    padding: 10px 10px 20px;    
     /* width: 600px; */
 }
 
@@ -284,7 +285,11 @@ h3 {
     font-weight: 500;
     padding-left: 10px;
     width: 700px;
+    /* color: black; */
     /* display: flex; */
+}
+.Help-p>p{
+    color: rgb(46, 45, 45);
 }
 
 .Help-Ans {
@@ -298,9 +303,11 @@ h3 {
 .UpperBody {
     padding: 70px 70px 0px;
     background-color: transparent;
+    
 }
 .UpperBody>h1,p{
     background-color: transparent;
+    color: #edf1f7;
 
 }
 .Menu {
@@ -369,6 +376,7 @@ span {
     padding-right: 20px;
 }
 
+
 .Menu-Recommendation-Left>h3 {
     font-size: 18px;
     font-family: sans-serif;
@@ -378,6 +386,7 @@ span {
 
 .Menu-Recommendation-Left>p {
     padding-bottom: 15px;
+    color: black;
 }
 
 .Menu-Recommendation-Left>p1 {
