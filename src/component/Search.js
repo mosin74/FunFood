@@ -92,7 +92,7 @@ const Search = () => {
 
                     </>)
             }
-            <p className="CopyRight">
+            <p className="CopyRight Copy">
                 &copy; 2023 Mosin Shaikh | All Rights Reserved
             </p>
         </>

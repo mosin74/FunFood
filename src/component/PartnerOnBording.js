@@ -4,7 +4,7 @@ const Section= ({ title, info, isVisible, SetisVisble , isHide }) => {
     return (
         <>
         <div className="Help-p">
-            <p className>{title}</p>
+            <p className="UpperBody-p-h2">{title}</p>
             {
                 isVisible ?
                     <>
@@ -13,7 +13,7 @@ const Section= ({ title, info, isVisible, SetisVisble , isHide }) => {
                             isHide(false)
                         }}>
                             Hide</button>
-                        <p className="Help-Ans">{info}</p>
+                        <p className="Help-Ans UpperBody-p-h2">{info}</p>
                 </>
                     :
                     <>

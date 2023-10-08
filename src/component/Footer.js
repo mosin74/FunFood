@@ -49,7 +49,7 @@ export const FooterComponent = () => {
                             <li className="main-footer-2-ul-li"> Ride with us</li>
                         </ul>
                         <ul className="main-footer-2-ul">
-                            <h3 className="main-footer-2-ul-h3 h-3-margin">
+                            <h3 className="main-footer-2-ul-h3 h-3-margin ">
                                 Legal
                             </h3>
                             <li className="main-footer-2-ul-li"> Terms & Conditions</li>

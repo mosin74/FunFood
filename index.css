@@ -1,12 +1,22 @@
 .light-them {
     --baground-color: rgb(255, 255, 255);
     --Nav-item: black;
+    --font:(0,0,0,0);
+    --font-light:(0,0,0,0);
+    --Body:rgba(0, 0, 0, 0);
+    --Help-Bag:#37718e;
+    
 
 }
 
 .dark-them {
-    --baground-color: rgb(3, 79, 112);
+    --baground-color: rgb(0, 80, 114);
     --Nav-item: white;
+    --Body:rgb(0, 72, 103);
+    --font:white;
+    --font-light:rgba(255, 255, 255, 0.817);
+    --Help-Bag:rgb(0, 72, 103);
+
 
 }
 
@@ -16,11 +26,13 @@
 }
 
 * {
-    /* background-color: var(--baground-color); */
+    background-color: var(--Body);
+    
     text-decoration: none;
     margin: 0px;
     padding: 0px;
-    /* color: var(--Nav-item); */
+    color: var(--font);
+ 
     font-family: 'ProximaNova', 'arial', 'Helvetica Neue', sans-serif;
 }
 
@@ -37,7 +49,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--baground-color);
+    /* background-color: var(--baground-color); */
     overflow: hidden;
 
 }
@@ -87,6 +99,7 @@
     overflow: hidden;
     padding-bottom: 20px;
 
+
 }
 
 .IMG-offer {
@@ -100,6 +113,8 @@
     overflow: hidden;
     margin: 0px 120px;
     border-bottom: 1px solid rgba(50, 50, 50, 0.365);
+
+
 }
 
 .OnMind>img,
@@ -126,13 +141,12 @@ h {
     margin: 20px 120px;
     padding: 15px 0px 10px 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgba(0, 0, 0, 0.662);
+    color: var(--font);
 }
 
 .Card {
     /* border-radius: 2px; */
     justify-content: center;
-    color: black;
     width: 175px;
     height: 200px;
     /* border: 1px solid; */
@@ -144,11 +158,10 @@ h {
 }
 
 
-.Card h3,
-p,
-p1 {
+.Card h3,p1,p{
     padding: 0px;
     margin: 0px;
+    color: var(--font);
 }
 
 .Card p1 {
@@ -202,7 +215,8 @@ p1 {
 .cuisines {
     font-size: small;
     line-height: 1rem;
-    color: rgb(129, 129, 129);
+    color:var(--font-light);
+    background-color: var(--Body);
 
 }
 
@@ -227,7 +241,7 @@ h3 {
     width: 100%;
     /* margin-top: 10px; */
     height: fit-content;
-    background-color: #37718e;
+    background-color: var(--Help-Bag);
     overflow: hidden;
     color: rgb(255, 255, 255);
     padding-top: 20px;
@@ -295,6 +309,9 @@ h3 {
     width: 700px;
     color: rgba(46, 46, 46, 0.721);
 }
+.UpperBody-p-h2{
+
+}
 
 
 .UpperBody {
@@ -314,7 +331,14 @@ p {
     font-size: 35px;
     padding: 0px 10px;
 }
+.UpperBody-p-h1{
+    background-color: var(--Body);
 
+}
+.UpperBody-p-h2{
+    background-color: var(--Body);
+
+}
 .Menu {
 
     margin: 50px 250px;
@@ -334,7 +358,9 @@ p {
     color: rgba(128, 128, 128, 0.662);
     padding: 3px 0px;
 }
-
+.detail-h2-p{
+background-color: white;
+}
 .Menu-Start {
     display: flex;
     justify-content: space-between;
@@ -465,6 +491,8 @@ button {
 
 .main-footer {
     color: white;
+    background-color: rgb(37, 37, 64);
+
     display: flex;
     justify-content: center;
     height: fit-content;
@@ -479,6 +507,8 @@ button {
     width: 40%;
     font-size: 12px;
     text-align: center;
+    background-color: rgb(37, 37, 64);
+
 
 }
 
@@ -486,12 +516,16 @@ button {
 p {
     color: white;
     padding: 10px;
+    background-color: rgb(37, 37, 64);
+
 }
 
 .main-footer-1>p {
     width: 60%;
     margin: auto;
     color: #bababa;
+    background-color: rgb(37, 37, 64);
+
     font-family: sans-serif;
 
 
@@ -502,6 +536,8 @@ p {
     display: flex;
     justify-content: space-evenly;
     font-size: 14px;
+    background-color: rgb(37, 37, 64);
+
     font-family: "Basis Grotesque Pro", Arial, sans-serif !important;
     /* background-color: rgb(255, 255, 255); */
     padding: 10px;
@@ -514,36 +550,50 @@ p {
     list-style: none;
     color: rgb(164, 164, 164);
     padding: 10px;
+    background-color: rgb(37, 37, 64);
+
 
 }
 
 .main-footer-2-ul {
     text-decoration: none;
+    background-color: rgb(37, 37, 64);
+
 }
 
 .Icons {
     color: #bababa;
-    /* background-color: aliceblue; */
+    background-color: rgb(0, 132, 247);
     display: flex;
     justify-content: center;
-    padding: 10px;
+    /* padding: 10px; */
+    background-color: rgb(37, 37, 64);
+
     /* margin: 10px; */
 }
 
 .Icons-h1 {
     padding: 10px;
     font-size: 30px;
+    background-color: rgb(37, 37, 64);
+    color: #edf1f7;
+
 }
 
 .main-footer-2-ul-h3 {
     font-size: 22px;
     padding: 15px 0px;
+    background-color: rgb(37, 37, 64);
+    /* padding-top: 20px; */
+
 
 }
 
 .h-3-margin {
 
-    margin-top: 20px;
+    padding-top: 20px;
+    background-color: rgb(37, 37, 64);
+
 }
 
 .CopyRight {
@@ -552,6 +602,9 @@ p {
     color: #bababa;
     font-family: monospace;
     text-align: center;
+}
+.Copy{
+    background-color: var(--Body);
 }
 
 
@@ -668,7 +721,8 @@ h1 {
     padding: 10px 5px;
   
 }
-.Main-Detail{
+.Main-Detail>p{
+    background-color: white;
 
 }
 
@@ -681,6 +735,7 @@ justify-content: space-between;
 color: rgba(59, 59, 59, 0.769);
 font-size: 12px;
 padding: 6px;
+background-color: white;
 }
 .Detail-hr{
     border: 1px solid rgba(128, 128, 128, 0.183);

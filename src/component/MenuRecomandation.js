@@ -38,7 +38,7 @@ const MenuRecomandation = () => {
                                     <div className="Menu-Recommendation-Left">
                                         {/* <p>{Menu.card?.}</p> */}
                                         <h3>{Menu.card?.info.name}</h3>
-                                        <p>₹ {(Menu.card?.info.price) / 100}</p>
+                                        <p className="detail-h2-p">₹ {(Menu.card?.info.price) / 100}</p>
                                         <p1>{Menu.card?.info.description}</p1>
                                     </div>
                                     <div className="Menu-Recommendation-Right">

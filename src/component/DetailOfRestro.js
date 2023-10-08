@@ -24,24 +24,24 @@ const RestroDetail = () => {
     return (
         <>
 
-        <div className="Menu-Start">
-                <p><Link to="/"><span>Home   </span></Link>{"     /    "}{information?.name}</p>
+        <div className="Menu-Start ">
+                <p className="detail-h2-p"><Link to="/"><span>Home   </span></Link>{"     /    "}{information?.name}</p>
                 <Link to="/Search"> <img src="https://tse4.mm.bing.net/th?id=OIP.9-l9QQfhMfbvYNTRGgp30gHaHa&pid=Api&P=0&h=180" alt="Search" className="Menu-Start-Img" /></Link>
         </div>
             <div className="Menu-Detail">
                 <div className="Menu-Left">
                     <div className="detail">
-                        <h2>{information?.name}</h2>
-                        <p>{information?.cuisines}</p>
-                        <p>{information?.areaName} , {information?.city}</p>
+                        <h2 className="detail-h2-p">{information?.name}</h2>
+                        <p className="detail-h2-p">{information?.cuisines}</p>
+                        <p className="detail-h2-p">{information?.areaName} , {information?.city}</p>
        
                 
                     </div>
                 </div>
-                <div className="Menu-right">
-                    <p className="avgRating"><span><img className="Rating" src={"https://logodix.com/logo/710633.png"} alt="star" /></span>{information?.avgRating}</p>
+                <div className="Menu-right ">
+                    <p className="avgRating detail-h2-p"><span><img className="Rating detail-h2-p" src={"https://logodix.com/logo/710633.png"} alt="star" /></span>{information?.avgRating}</p>
                     <hr />
-                    <p>{information?.totalRatingsString}</p>
+                    <p className="detail-h2-p">{information?.totalRatingsString}</p>
                 </div>
             </div>
             <hr className="Menu-hr"/>

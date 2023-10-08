@@ -7,7 +7,7 @@ const HelpFAQS = () => {
             <div className="Help">
                 <div className="UpperBody">
                     <h1>Help & Support</h1>
-                    <p>Let's take a step ahead and help you better.</p>
+                    <p className="UpperBody-p-h1">Let's take a step ahead and help you better.</p>
                 </div>
                 <div className="Help-Sub">
                     <div className="Help-Left-Div">

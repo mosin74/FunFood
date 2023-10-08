@@ -5,7 +5,7 @@ const Section = ({ isVisible, Answer, title, setHide, setIsVisible }) => {
     return (
         <>
             <div className="Help-p">
-                <p className>{title}</p>
+                <p className="UpperBody-p-h1">{title}</p>
                 {
 
                     isVisible ?
@@ -13,7 +13,7 @@ const Section = ({ isVisible, Answer, title, setHide, setIsVisible }) => {
                             <button onClick={() => { setHide(false) }}>
                                 Hide
                             </button>
-                            <p>{Answer}</p>
+                            <p className="Help-Ans UpperBody-p-h1">{Answer}</p>
 
                         </>
                         :
