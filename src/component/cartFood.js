@@ -1,22 +1,17 @@
 import { IMG_CDN_URL } from "../config";
-const CartFood = ({name,price,description,imageId}) => {
+const CartFood = ({ name, price, description, imageId, }) => {
+
 
     return (
         <>
-            <div className="Menu-Recommendation">
-
-                <div className="Menu-Recommendation-Left">
-                    <h3>{name}</h3>
-                    <p>₹ {price/100}</p>
-                    <p1>{description}</p1>
-                </div>
-                <div className="Menu-Recommendation-Right">
-                    <img src={IMG_CDN_URL + imageId} alt="" className="Menu-Recommendation-Img" />
-
-                </div>
-
-            </div >
-            <hr className="Menu-hr" />
+      
+                <div className="Menu-Recommendation cart-food">
+                    <img src={IMG_CDN_URL+imageId} className="cart-food-img"/>
+                    <p>{name}</p>
+                    <p><span>-</span><span>1</span><span>+</span></p>
+                    <p>₹ {price / 100}</p>
+                </div >
+             
         </>
     )
 

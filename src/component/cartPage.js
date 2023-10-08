@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
-import { useState , useEffect } from "react";
+import { useState, useEffect } from "react";
 import CartFood from "./cartFood";
+import BillDetail from "./BillDetail";
 
 
 
@@ -15,12 +16,17 @@ const CartPage = () => {
     return (
 
         <>
-            <h1></h1>
-            {cartItems.map((Info) => {
-                return <>
-                    <CartFood {...Info} />
-                </>
-            })}
+
+            {/* <h2>Cart Page</h2> */}
+            <div className="Main-cart-food">
+                {cartItems.map((Info) => {
+                    return <>
+                        <CartFood {...Info} />
+                    </>
+                })}
+
+                <BillDetail />
+            </div>
 
 
         </>

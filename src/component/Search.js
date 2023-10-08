@@ -39,7 +39,7 @@ const Search = () => {
     return (
         <>
             {
-                (!MindSection) ? (< MindShimmer/>) :
+                (!MindSection) ? (< MindShimmer />) :
                     (<>
                         <div className="search-Container" data-testid="Search">
                             <input type="text"
@@ -52,18 +52,22 @@ const Search = () => {
 
                             />
 
-                            <p onClick={() => {
+                            {/* <p onClick={() => {
                                 const Data = filterData(searchText, restaurants);
                                 setFilteredRestaurants(Data);
                             }}>
-                                🔍</p>
+                                🔍</p> */}
+                            <img src="https://tse4.mm.bing.net/th?id=OIP.9-l9QQfhMfbvYNTRGgp30gHaHa&pid=Api&P=0&h=180" alt="Search" className="Search-Img" onClick={() => {
+                                const Data = filterData(searchText, restaurants);
+                                setFilteredRestaurants(Data);
+                            }} />
                         </div>
                         {(searchText == null) ? (null) : (
 
                             <>
                                 {Filteredrestaurants.map((List) => {
                                     return (
-                                        <Link to={"/restaurant/"+ List.info.feeDetails.restaurantId}>
+                                        <Link to={"/restaurant/" + List.info.feeDetails.restaurantId}>
                                             <div className="Search-restro ">
                                                 <p>{List.info.name}</p>
                                                 <img className="Search-restro-Img" src={IMG_CDN_URL + List.info.cloudinaryImageId} />
@@ -85,9 +89,12 @@ const Search = () => {
                             })}
 
                         </div>
+
                     </>)
             }
-
+            <p className="CopyRight">
+                &copy; 2023 Mosin Shaikh | All Rights Reserved
+            </p>
         </>
     )
 }

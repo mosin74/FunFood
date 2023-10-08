@@ -187,7 +187,10 @@ p1 {
     padding-bottom: 10px;
 
 }
-
+.Search-Img{
+    width: 20px;
+    height: 20px;
+}
 .search-Container>input {
     width: 500px;
     height: 25px;
@@ -283,13 +286,14 @@ h3 {
 
 .Help-p>p {
     color: rgb(46, 45, 45);
+    font-size: 16px;
 }
 
 .Help-Ans {
     padding: 10px;
-    font-size: 16px;
+    font-size: 10px;
     width: 700px;
-    color: rgba(46, 46, 46, 0.799);
+    color: rgba(46, 46, 46, 0.721);
 }
 
 
@@ -303,7 +307,12 @@ h3 {
 p {
     background-color: transparent;
     color: #edf1f7;
+    /* font-size: 50px; */
 
+}
+.UpperBody>h1{
+    font-size: 35px;
+    padding: 0px 10px;
 }
 
 .Menu {
@@ -448,7 +457,7 @@ button {
 
 }
 
-.footer{
+.footer {
     background-color: rgb(37, 37, 64);
     text-align: start;
 
@@ -537,9 +546,9 @@ p {
     margin-top: 20px;
 }
 
-.CopyRight{
-    font-size:small;
-    padding-bottom:30px ;
+.CopyRight {
+    font-size: small;
+    padding-bottom: 30px;
     color: #bababa;
     font-family: monospace;
     text-align: center;
@@ -579,11 +588,13 @@ p {
 
 
 }
-.ShimmerMind{
+
+.ShimmerMind {
     margin: 40px 80px;
- 
-    
+
+
 }
+
 .Shimmer-Mind {
     width: 90%;
     height: 150px;
@@ -602,8 +613,9 @@ p {
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-    margin:0px 135px;
+    margin: 0px 135px;
 }
+
 .Shimmer {
     width: 250px;
 
@@ -611,7 +623,75 @@ p {
     border: 1px solid;
     padding: 10px;
     margin: 10px auto;
-    
+
     line-height: 0.2rem;
     background-color: rgba(140, 140, 140, 0.541);
+}
+
+.cart-food {
+    font-size: 10px;
+    margin: 10px;
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid rgba(128, 128, 128, 0.363); */
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 1px 0px;
+}
+
+.cart-food>p,
+h1 {
+    font-size: 12px;
+    color: rgb(31, 31, 32);
+}
+
+.cart-food>p>span {
+    font-size: 14px;
+    color: black;
+    padding: 5px;
+}
+
+.Main-cart-food {
+    box-shadow: rgba(0, 0, 0, 0.18) 3px 3px 3px 3px;
+    height: 400px;
+    overflow-y: scroll;
+    margin: 30px 32%;
+
+}
+.cart-food-img{
+    width: 50px;
+    padding: 0px;
+}
+.Main-Detail>p{
+    color: black;
+    font-size:small;
+    font-weight:400;
+    padding: 10px 5px;
+  
+}
+.Main-Detail{
+
+}
+
+.Detail-1{
+display: flex;
+justify-content: space-between;
+
+}
+.Detail-1>p{
+color: rgba(59, 59, 59, 0.769);
+font-size: 12px;
+padding: 6px;
+}
+.Detail-hr{
+    border: 1px solid rgba(128, 128, 128, 0.183);
+
+}
+.Order-Button{
+    background-color: rgb(96, 160, 0);
+    border: none;
+    box-shadow: none;
+    border-radius: 0px;
+    color: rgb(255, 255, 255);
+    margin: 10px 180px;
+    font-size: 12px;
 }
