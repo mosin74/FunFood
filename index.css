@@ -462,8 +462,13 @@ span {
     box-shadow: rgba(0, 0, 0, 0.18) 0px 1px 2px;
     padding: 5px 40px;
     justify-content: space-between;
-
+background-color: white;
     position: static;
+}
+.Search-restro>p{
+background-color: rgb(255, 255, 255);
+color: black;
+
 }
 
 .Search-restro-Img {
@@ -695,6 +700,7 @@ p {
 h1 {
     font-size: 12px;
     color: rgb(31, 31, 32);
+    background-color: #ffffff;
 }
 
 .cart-food>p>span {

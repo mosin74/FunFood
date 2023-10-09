@@ -68,7 +68,7 @@ const Search = () => {
                                 {Filteredrestaurants.map((List) => {
                                     return (
                                         <Link to={"/restaurant/" + List.info.feeDetails.restaurantId}>
-                                            <div className="Search-restro ">
+                                            <div className="Search-restro">
                                                 <p>{List.info.name}</p>
                                                 <img className="Search-restro-Img" src={IMG_CDN_URL + List.info.cloudinaryImageId} />
                                             </div>
