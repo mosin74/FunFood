@@ -6,11 +6,12 @@ import Shimmer from "./Shimmer";
 import { addItem } from "../../utils/CartSlice";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 
 const MenuRecomandation = () => {
 
 
+    [Gotocart, setGotocart] = useState(false);
 
     const { id } = useParams();
     const menuList = useMenu(id);
@@ -44,9 +45,15 @@ const MenuRecomandation = () => {
                                     <div className="Menu-Recommendation-Right">
                                         <img src={IMG_CDN_URL + Menu.card?.info.imageId} alt="" className="Menu-Recommendation-Img" />
 
-                                        <button className=" Menu-Recommendation-Right-Button" onClick={() => {
+                                        {
+                                            (!Gotocart) ? <button className=" Menu-Recommendation-Right-Button" onClick={() => {
+                                                AddFoodItem((Menu.card.info));
+                                                setGotocart(true);
+                                            }}> Add </button> : (<button className=" Menu-Recommendation-Right-Button"><Link to="/Cart"> Cart</Link> </button>)
+                                        }
+                                        {/* <button className=" Menu-Recommendation-Right-Button" onClick={() => {
                                             AddFoodItem((Menu.card.info))
-                                        }}> Add </button>
+                                        }}> Add </button> */}
 
 
 
