@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
-const BillDetail = (props) => {
+import { Link } from "react-router-dom";
+const BillDetail = () => {
 
     const cartItems = useSelector(store => store.cart.items);
  
@@ -10,7 +11,9 @@ const BillDetail = (props) => {
         }
         return a;
     }
-    return (<>
+    return (
+    (cartItems!=0)?
+    <>
         <div className="Main-Detail">
             <p>Bill Details</p>
             <div className="Detail-1">
@@ -24,12 +27,14 @@ const BillDetail = (props) => {
             <hr className="Detail-hr" />
             <div className="Detail-1">
                 <p>Subtotal</p>
-                <p>{Subtotal()+35}</p>
+                <p>₹{Subtotal()+35}</p>
 
             </div>
-            <button className="Order-Button"> Place Order</button>
+            <button className="Order-Button"><Link to="/thanks">Place Order</Link></button>
         </div>
-    </>)
+    </>
+    :(<><h1>Cart Is Empty</h1></>)
+    )
 
 }
 

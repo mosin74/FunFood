@@ -17,6 +17,7 @@ import store from './component/Store.js';
 import CartPage from './component/cartPage.js';
 import HelpLegal from './component/HelpLegal.js';
 import HelpFAQS from './component/HelpFAQS.js';
+import Thanks from './component/Thanks.js';
 
 
 
@@ -55,7 +56,6 @@ const SearchComponenet = () => (
         </Provider>
     </>
 );
-
 
 const appRouter = createBrowserRouter([
     {
@@ -134,7 +134,14 @@ const appRouter = createBrowserRouter([
     },
     {
         path:"/Search",
-        element:<SearchComponenet/>
+        element:<SearchComponenet/>,
+        // children:[
+        //     path"/Search",
+        // ]
+    },
+    {
+        path:"/thanks",
+        element:<Thanks/>
     }
 ])
 

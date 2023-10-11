@@ -10,13 +10,13 @@ const CartPage = () => {
 
     const cartItems = useSelector(store => store.cart.items);
     let a = 0;
-   function Subtotal() {
+    function Subtotal() {
         for (let index = 0; index < cartItems.length; index++) {
-            a = ((cartItems[index].price)/ 100) + a;
+            a = ((cartItems[index].price) / 100) + a;
         }
         return a;
     }
-
+console.log(cartItems);
     return (
 
         <>
@@ -25,14 +25,11 @@ const CartPage = () => {
             <div className="Main-cart-food">
                 {cartItems.map((Info) => {
                     return <>
-                        <CartFood {...Info} />
+                        <CartFood {...Info}/>
                     </>
                 })}
-                <BillDetail/>
+                <BillDetail />
             </div>
-
-
-
         </>
     )
 

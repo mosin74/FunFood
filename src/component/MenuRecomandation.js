@@ -45,15 +45,15 @@ const MenuRecomandation = () => {
                                     <div className="Menu-Recommendation-Right">
                                         <img src={IMG_CDN_URL + Menu.card?.info.imageId} alt="" className="Menu-Recommendation-Img" />
 
-                                        {
+                                        {/* {
                                             (!Gotocart) ? <button className=" Menu-Recommendation-Right-Button" onClick={() => {
                                                 AddFoodItem((Menu.card.info));
                                                 setGotocart(true);
                                             }}> Add </button> : (<button className=" Menu-Recommendation-Right-Button"><Link to="/Cart"> Cart</Link> </button>)
-                                        }
-                                        {/* <button className=" Menu-Recommendation-Right-Button" onClick={() => {
+                                        } */}
+                                        <button className=" Menu-Recommendation-Right-Button" onClick={() => {
                                             AddFoodItem((Menu.card.info))
-                                        }}> Add </button> */}
+                                        }}> Add </button>
 
 
 
