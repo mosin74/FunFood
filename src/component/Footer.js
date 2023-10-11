@@ -4,6 +4,7 @@ import instagram from "../Images/Instagram_icon.png"
 import linkdin from "../Images/Linkdin.png"
 import { Link } from "react-router-dom";
 import { AiFillGithub, AiFillTwitterCircle, AiFillLinkedin, AiFillInstagram } from "react-icons/ai";
+import { GitHub_URL, Instagram_URL, Linkdin_URL, Twitter_URL } from "../config";
 
 export const FooterComponent = () => {
     return (
@@ -15,13 +16,12 @@ export const FooterComponent = () => {
 
                     <div className="main-footer-1">
                         <Link to="/"><h className="Logo"><span className="Logo-span-1">Fun</span><span className="Logo-span-2">Food.</span></h></Link>
-
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo reprehenderit deserunt eveniet! Deserunt, velit. Mollitia nostrum aut nihil ex eos optio recusandae id ad distinctio, nulla commodi, dolorum, tempore minus.</p>
+                        <p>I am student of B.tech (2022-2026), I am developed this website at learning phase of React Js , If you want then you can connect with me on social media platform mentioned below by clicking on them.</p>
                         <div className="Icons">
-                            <h1 className="Icons-h1"> <AiFillLinkedin /></h1>
-                            <h1 className="Icons-h1"><AiFillGithub /></h1>
-                            <h1 className="Icons-h1"><AiFillTwitterCircle /></h1>
-                            <h1 className="Icons-h1"><AiFillInstagram /></h1>
+                            <h1 className="Icons-h1"><Link to={Linkdin_URL}> <AiFillLinkedin /></Link></h1>
+                            <h1 className="Icons-h1"><Link to={Twitter_URL}><AiFillTwitterCircle /></Link></h1>
+                            <h1 className="Icons-h1"><Link to={GitHub_URL}><AiFillGithub /></Link></h1>
+                            <h1 className="Icons-h1"><Link to={Instagram_URL}><AiFillInstagram /></Link></h1>
                         </div>
 
 

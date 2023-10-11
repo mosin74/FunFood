@@ -4,6 +4,11 @@ export const Menu_URL="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MEN
 export const Menu_API="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=23.2599333&lng=77.412615&restaurantId=";
 export const Restaurants_URL="https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 export const Offer_IMG_CDN_URL="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_850,h_504/";
+export const Linkdin_URL="https://www.linkedin.com/in/mosin-shaikh-019480202";
+export const GitHub_URL="https://github.com/mosin74";
+export const Twitter_URL="https://twitter.com/Mosinshaikh7437";
+export const Instagram_URL ="https://instagram.com/mosin_shaikh_74__?igshid=MzRlODBiNWFlZA==";
+
 // export const restaurantList = [
 //     {
 //         info: {
