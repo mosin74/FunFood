@@ -8,7 +8,7 @@ const CartFood = ({ name, price, description, imageId,decrement,Amount}) => {
                     <img src={IMG_CDN_URL+imageId} className="cart-food-img"/>
                     <p>{name}</p>
                     {/* <p><button onClick={()=>decrement()}>-</button><span>{Amount}</span><span>+</span></p> */}
-                    <p>₹ {price / 100}</p>
+                    <p>₹{price / 100}</p>
                 </div >
              
         </>
