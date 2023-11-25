@@ -1,13 +1,13 @@
 {
-  "homepage": "https://mosin74.gihub.io/FunFod",
+  "homepage": "https://mosin74.gihub.io/FunFood.git",
   "name": "lec_2",
   "version": "1.0.0",
   "description": "This is Lec 2",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "start": "parcel index.html",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --public-url https://mosin74.gihub.io/FunFood.git",
     "test": "jest",
     "watch-test": "jest --watch"
   },
