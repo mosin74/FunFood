@@ -12,10 +12,10 @@ import MindShimmer from "./ShimmerMInd";
 const Search = () => {
 
 
-    const [searchText, setSearchText] = useState(); //To Create State Variable 
+    const [searchText, setSearchText] = useState(""); //To Create State Variable 
     const [MindSection, SetMindSection] = useState(null);
     const [restaurants, setRestaurants] = useState(null);
-    const [Filteredrestaurants, setFilteredRestaurants] = useState(null);
+    const [Filteredrestaurants, setFilteredRestaurants] = useState("");
 
 
     useEffect(() => {
