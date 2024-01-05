@@ -49,18 +49,19 @@ const Body = () => {
         }
         {(!Restro) ? (<Shimmer />) : (
             <>
-        <h2 className="Heading">Restaurants with online food delivery in Indore</h2>
-            <div className='restaro-list' >
-                {Restro.map((restaurants) => {
-                    return (
-                        <Link to={"/restaurant/" + restaurants.info.feeDetails.restaurantId}>
-                            <RestroCard {...restaurants.info} />
-                        </Link>
-                    )
-                })
-                }
+                <h2 className="Heading">Restaurants with online food delivery in Indore</h2>
+                <div className='restaro-list' >
+                    {Restro.map((restaurants) => {
+                        return (
+                            <Link to={"/restaurant/" + restaurants.info.id}>
 
-            </div>
+                                <RestroCard {...restaurants.info} />
+                            </Link>
+                        )
+                    })
+                    }
+
+                </div>
             </>)
         }
     </>
